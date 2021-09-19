@@ -1,0 +1,1 @@
+ var a= document.getElemenByClassName('input1');

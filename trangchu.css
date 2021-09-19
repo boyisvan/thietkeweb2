@@ -1,0 +1,271 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --spacing:10px;
+}
+.trangchu_container{
+    height: 100vh;
+    width: 100%;
+    background-image: url(img/trangchu_background.png);
+    background-position: center;
+    background-size: cover;
+    padding-left: 5%;
+    padding-right: 5%;
+    box-sizing: border-box;
+    position: relative;
+}
+.trangchu_navbar{
+    display: flex;
+    width: 100%;
+    height: 10vh;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+.trangchu_namepage{
+    width: 20%;
+}
+.trangchu_namepage p{
+    width: 40%;
+    padding: 9px;
+    color: white;
+    border-radius: 5px;
+    margin: auto;
+    text-align: center;
+    background: linear-gradient(45deg, blue , violet);
+}
+
+nav{
+    width: 60%;
+    cursor: pointer;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+}
+nav ul li{
+    flex: 1;
+    margin-left: 40px;
+    font-size: 18px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: rgb(46, 46, 206) ;
+    animation: doimaumenu 10s infinite;
+}
+@keyframes doimaumenu {
+    0% ,100%{
+        color: rgb(46, 46, 206) ; 
+    }
+    50%{
+        color:#FF77cd ;
+    }
+}
+nav ul li:hover{
+    font-size: 20px;
+    opacity: 0.9;
+}
+.trangchu_logo{
+    display: flex;
+    width: 20%;
+    height: 35px;
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 14% 86%;
+    border-radius: 20px;
+    background: #fff;
+    padding: 4px 15px;
+}
+.trangchu_logo input{
+    border: none;
+    outline: none;
+    width: 80%;
+    border-left: 1px solid #DDDDDD;
+}
+.trangchu_logo input::placeholder{
+    color: #BBBBBB;
+}
+
+/* css phần content của trang chủ----------------------------------------- */
+.trangchu_content{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* ----------đây là phần content phụ bên trái--------- */
+.trangchu_button a{
+    text-decoration: none;
+    color: white;
+}
+.trangchu_button{
+    width: 30%;
+    background: linear-gradient(45deg,#87adfe ,#FF77cd);
+    text-align: center;
+    padding: 4px 5px;
+    border-radius: 4px;
+    margin: 10px 0px 10px 10%;
+    cursor: pointer;
+    animation: scale 2s ease infinite;
+}
+
+@keyframes scale {
+    0% ,100%{
+        background: #87adfe;
+    }
+    50%{
+        background: #FF77cd;
+        transform: scale(1.05,1.05);
+    }
+}
+
+.trangchu_title p{
+    font-weight:100 ;
+    font-size: 40px;
+    color: #232d60;
+    user-select: none;
+}
+.trangchu_title i{
+    color: violet;
+    opacity: 0.7;
+}
+.extra2{
+    margin-top: 50px;
+    /* background: ; */
+}
+.trangchu_boxads{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    margin: 0 var(--spacing)*(-1);
+}
+.box{
+    width: 40%;
+    height: 200px;
+    /* background:; */
+    margin: 10px var(--spacing);
+    width:calc(50% - var(--spacing)*2);
+    cursor: pointer;
+}
+.box p{
+    text-align: center;
+    color: rgb(207, 65  , 65);
+    font-size: 15px;
+    text-transform: uppercase;
+    user-select: none;
+}
+#box1{
+    position: relative;
+}
+#box1 img{
+    width: 100%;
+    border-radius: 10px;
+    animation: img 0.2s ease infinite;
+}
+.box1_infor{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: #fff;
+    top: -40px;
+    right: -60px;
+    box-shadow: 0 5px 10px rgba(0, 0,0, 0.7);
+    z-index: 1;
+    opacity: 0;
+    border-radius: 15px;
+    padding: 5px;
+}
+#box1:hover .box1_infor{
+    transition: 2s ease;
+    opacity: 1;
+}
+#box2{
+    position: relative;
+}
+#box2 img{
+    border-radius: 10px;
+    width: 100%;
+    animation: img 0.2s ease infinite;
+}
+#box2:hover .box1_infor{
+    transition: 2s ease;
+    opacity: 1;
+}
+#box3{
+    position: relative;
+}
+#box3 img{
+    border-radius: 10px;
+    width: 100%;
+    animation: img 0.2s ease infinite;
+}
+#box3:hover .box1_infor{
+    transition: 1.3s ease;
+    opacity: 1;
+}
+#box4{
+    position: relative;
+}
+#box4 img{
+    width: 100%;
+    border-radius: 10px;
+    animation: img 0.2s ease infinite;
+}
+#box4:hover .box1_infor{
+    transition: 1s ease;
+    opacity: 1;
+}
+@keyframes img {
+    0% , 100%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0.9;
+        transform: scale(0.99,0.99);
+    }
+}
+
+.trangchu_content--extra{
+    /* background: ; */
+    width: 40%;
+}
+
+/* -------------------------------------phần main content--------------------------- */
+.trangchu_content--main{
+    width: 60%;
+    position: relative;
+}
+.trangchu_content--main img{
+    width: 70%;
+    display: block;
+    margin: 20px auto;
+}
+.login-with{
+    position: absolute;
+    display: flex;
+    top: 0;
+    right: 0;
+}
+#i{
+    margin-left: 20px;
+    width: 100%;
+    height: 30px;
+}
+#i:nth-child(1){
+    color: rgb(121, 121, 240);
+}
+#i:nth-child(2){
+    color: rgb(121, 121, 240);
+}
+#i:nth-child(3){
+    color: rgb(121, 121, 240);
+}
+#i:nth-child(4){
+    color: rgb(121, 121, 240);
+}
