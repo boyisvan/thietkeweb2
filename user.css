@@ -1,0 +1,82 @@
+
+
+:root{
+    --black:#2c2c54;
+    --blue:#87adfe;
+
+}
+
+*{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html{
+    font-size: 62,5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+
+}
+
+section{
+    padding: 2rem 9%;
+}
+
+header{
+    position: fixed;
+    top: 0;left: 0;right: 0;
+    z-index: 1000;
+    background: #fff;
+    padding: 1.3rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 .5rem 1rem rgba(0,0, 0, .1);
+}
+
+header .logo{
+    font-size:  1.5rem;
+    color: var(--black);
+    margin-left: 1rem;
+}
+
+/* header .navbar a{
+    color: var(--black);
+    margin: 10px;
+    padding: 15px;
+    border-radius: 9px;
+}
+header .navbar a:hover{
+    color: var(--blue);
+    background-color: rgb(228, 253, 253);
+} */
+.main_search{
+    background-color: red;
+    width: 20%;
+}
+header .icon a{
+    font-size: 1.5rem;
+    color: var(--black);
+    margin: 0.1rem;
+}
+header .icon a:hover{
+    color: var(--blue);
+}
+#menu-bar{
+    font-size: 1rem;
+    padding: .5rem 1.2rem ;
+    border: 1px solid var(--black);
+    color:var(--black);
+    border-radius: .3rem;
+    cursor: pointer;
+    display: none;
+
+}

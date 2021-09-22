@@ -1,272 +1,443 @@
+
+
+:root{
+    --black:#2c2c54;
+    --blue:#87adfe;
+
+}
+
 *{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-:root{
-    --spacing:10px;
-}
-.trangchu_container{
-    height: 100vh;
-    width: 100%;
-    background-image: url(img/trangchu_background.jpg);
-    background-position: center;
-    background-size: cover;
-    padding-left: 5%;
-    padding-right: 5%;
-    box-sizing: border-box;
-    position: relative;
-    background-color: #FF77cd;
-}
-.trangchu_navbar{
-    display: flex;
-    width: 100%;
-    height: 10vh;
-    margin: auto;
-    align-items: center;
-    justify-content: center;
-}
-.trangchu_namepage{
-    width: 20%;
-}
-.trangchu_namepage p{
-    width: 40%;
-    padding: 9px;
-    color: white;
-    border-radius: 5px;
-    margin: auto;
-    text-align: center;
-    background: linear-gradient(45deg, blue , violet);
-}
-
-nav{
-    width: 60%;
-    cursor: pointer;
-}
-nav ul li{
-    list-style: none;
-    display: inline-block;
-}
-nav ul li{
-    flex: 1;
-    margin-left: 40px;
-    font-size: 18px;
-}
-nav ul li a{
-    text-decoration: none;
-    color: rgb(46, 46, 206) ;
-    animation: doimaumenu 10s infinite;
-}
-@keyframes doimaumenu {
-    0% ,100%{
-        color: rgb(46, 46, 206) ; 
-    }
-    50%{
-        color:#FF77cd ;
-    }
-}
-nav ul li:hover{
-    font-size: 20px;
-    opacity: 0.9;
-}
-.trangchu_logo{
-    display: flex;
-    width: 20%;
-    height: 35px;
-    align-items: center;
-    justify-content: center;
-    display: grid;
-    grid-template-columns: 14% 86%;
-    border-radius: 20px;
-    background: #fff;
-    padding: 4px 15px;
-}
-.trangchu_logo input{
-    border: none;
     outline: none;
-    width: 80%;
-    border-left: 1px solid black;
-}
-.trangchu_logo input::placeholder{
-    color: #BBBBBB;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
 }
 
-/* css phần content của trang chủ----------------------------------------- */
-.trangchu_content{
+html{
+    font-size: 62,5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+
+}
+
+section{
+    padding: 2rem 9%;
+}
+
+header{
+    position: fixed;
+    top: 0;left: 0;right: 0;
+    z-index: 1000;
+    background: #fff;
+    padding: 1.3rem 9%;
     display: flex;
     align-items: center;
-    position: relative;
+    justify-content: space-between;
+    box-shadow: 0 .5rem 1rem rgba(0,0, 0, .1),0 .5rem 1rem rgba(0,0, 0, .1),0 .5rem 1rem rgba(0,0, 0, .1);
 }
 
-/* ----------đây là phần content phụ bên trái--------- */
-.trangchu_button a{
-    text-decoration: none;
-    color: white;
+header .logo{
+    font-size:  1.5rem;
+    color: var(--black);
+    margin-left: 1rem;
 }
-.trangchu_button{
-    width: 30%;
-    background: linear-gradient(45deg,#87adfe ,#FF77cd);
-    text-align: center;
-    padding: 4px 5px;
-    border-radius: 4px;
-    margin: 10px 0px 10px 10%;
+
+header .navbar a{
+    color: var(--black);
+    margin: 10px;
+    padding: 15px;
+    border-radius: 9px;
+}
+header .navbar a:hover{
+    color: var(--blue);
+    background-color: rgb(228, 253, 253);
+}
+@keyframes click_me {
+  0%,100%{
+    transform: scale(1.06,1.06);
+  }
+  50%{
+    transform: scale(1,1);
+  }
+}
+
+header .icon a{
+    font-size: 1.5rem;
+    color: var(--black);
+    margin: 0.1rem;
+  }
+header .icon a:hover{
+  animation: click_me 0.4s infinite;
+    color: var(--blue);
+}
+#menu-bar{
+    font-size: 1rem;
+    padding: .5rem 1.2rem ;
+    border: 1px solid var(--black);
+    color:var(--black);
+    border-radius: .3rem;
     cursor: pointer;
-    animation: scale 2s ease infinite;
+    display: none;
+
 }
 
-@keyframes scale {
-    0% ,100%{
-        background: #87adfe;
-    }
-    50%{
-        background: #FF77cd;
-        transform: scale(1.05,1.05);
-    }
+/* slide start */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
 }
 
-.trangchu_title p{
-    font-weight:100 ;
-    font-size: 40px;
-    color: #232d60;
-    user-select: none;
-}
-.trangchu_title i{
-    color: violet;
-    opacity: 0.7;
-}
-.extra2{
-    margin-top: 50px;
-    /* background: ; */
-}
-.trangchu_boxads{
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: stretch;
-    margin: 0 var(--spacing)*(-1);
-}
-.box{
-    width: 40%;
-    height: 200px;
-    /* background:; */
-    margin: 10px var(--spacing);
-    width:calc(50% - var(--spacing)*2);
-    cursor: pointer;
-}
-.box p{
-    text-align: center;
-    color: rgb(207, 65  , 65);
-    font-size: 15px;
-    text-transform: uppercase;
-    user-select: none;
-}
-#box1{
-    position: relative;
-}
-#box1 img{
-    width: 100%;
-    border-radius: 10px;
-    animation: img 0.2s ease infinite;
-}
-.box1_infor{
-    position: absolute;
-    width: 150px;
-    height: 150px;
-    background: #fff;
-    top: -40px;
-    right: -60px;
-    box-shadow: 0 5px 10px rgba(0, 0,0, 0.7);
-    z-index: 1;
-    opacity: 0;
-    border-radius: 15px;
-    padding: 5px;
-}
-#box1:hover .box1_infor{
-    transition: 2s ease;
-    opacity: 1;
-}
-#box2{
-    position: relative;
-}
-#box2 img{
-    border-radius: 10px;
-    width: 100%;
-    animation: img 0.2s ease infinite;
-}
-#box2:hover .box1_infor{
-    transition: 2s ease;
-    opacity: 1;
-}
-#box3{
-    position: relative;
-}
-#box3 img{
-    border-radius: 10px;
-    width: 100%;
-    animation: img 0.2s ease infinite;
-}
-#box3:hover .box1_infor{
-    transition: 1.3s ease;
-    opacity: 1;
-}
-#box4{
-    position: relative;
-}
-#box4 img{
-    width: 100%;
-    border-radius: 10px;
-    animation: img 0.2s ease infinite;
-}
-#box4:hover .box1_infor{
-    transition: 1s ease;
-    opacity: 1;
-}
-@keyframes img {
-    0% , 100%{
-        opacity: 1;
-    }
-    50%{
-        opacity: 0.9;
-        transform: scale(0.99,0.99);
-    }
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
 }
 
-.trangchu_content--extra{
-    /* background: ; */
-    width: 40%;
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
 }
 
-/* -------------------------------------phần main content--------------------------- */
-.trangchu_content--main{
-    width: 60%;
-    position: relative;
+.dot {
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
 }
-.trangchu_content--main img{
-    width: 70%;
+
+.active {
+  background-color: #717171;
+}
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+/* slide end  */
+/* content game start  */
+.content{
+	max-width: 1250px;
+	width: auto;
+	margin:30px auto;
+}
+
+.right-content {
+	width: 68%;
+	float: left;
+}
+.right-content .section{
+	background-color: white;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	padding: 20px;
+  border: 2px solid var(--black);
+
+}
+.right-content .section img{
+	display: block;
+	float: left;
+	margin-right: 20px;
+	width: 200px;
+}
+.right-content .section:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.right-content .content-section h3 a{
+	color: var(--black);
+	font-size: 24px;
+}
+.right-content .content-section h4{
+	margin: 8px 0 12px 0;
+}
+.right-content .content-section p{
+	line-height: 1.8em;
+	text-align: justify;
+	font-size: 10px;
+	margin-bottom: 10px;
+}
+.right-content .content-section h4 a{
+	color: var(--blue);
+}
+.right-content .readmore a{
+	background-color: var(--blue);
+	padding: 6px 15px;
+	color: white; 
+}
+.left-content{
+	width: 30%;
+	float: right;
+	background-color: white;
+	padding: 20px;
+  border: 2px solid var(--black);
+  border-radius: 5px;
+}
+.left-content  h3{
+	text-align: center;
+	color: var(--blue);
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+.left-content .item{
+	border-bottom: 0.5px dotted #757575;
+	padding: 5px 0;
+}
+.left-content .image-item{
+	float: left;
+}
+.left-content .image-item img{
+	width: 85px;
+	height: 55px;
+	margin-right: 15px;
+}
+.left-content .item:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.left-content .item p a{
+	color: #212121;
+	font-size: 15px;
+}
+.left-content .item p a:hover{
+	color: green;
+	}
+
+.content:after{
+    content: "";
     display: block;
-    margin: 20px auto;
+    clear: both;
+  }
+/* content game end  */
+
+/* footer start */
+.footer .box-container{
+  border:.1rem solid rgba(0,0,0,.1);
+  border-radius: .5rem;
+  background:#f9f9f9;
+  padding:30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap:.5rem;
 }
-.login-with{
-    position: absolute;
-    display: flex;
-    top: 0;
-    right: 0;
+
+.footer .box-container .box{
+  flex:1 1 10rem;
 }
-#i{
-    margin-left: 20px;
-    width: 100%;
-    height: 30px;
+
+.footer .box-container .box h3{
+  color:var(--black);
+  font-size: 2.5rem;
+  padding-bottom: 1.5rem;
 }
-#i:nth-child(1){
-    color: rgb(121, 121, 240);
+
+.footer .box-container .box a{
+  color:#666;
+  font-size: 1.5rem;
+  padding-bottom: 1.5rem;
+  display: block;
 }
-#i:nth-child(2){
-    color: rgb(121, 121, 240);
+
+.footer .box-container .box a:hover{
+  color:var(--blue);
 }
-#i:nth-child(3){
-    color: rgb(121, 121, 240);
+
+.footer .box-container .credit{
+  text-align: center;
+  width:100%;
+  border-top: .1rem solid rgba(0,0,0,.1);
+  font-size: 1.5rem;
+  padding:1rem;
+  padding-top: 2rem;
+  color:#999;
 }
-#i:nth-child(4){
-    color: rgb(121, 121, 240);
+
+.footer .box-container .credit span{
+  color:var(--orange);
 }
+
+
+
+/* feedback--------------------------------------- */
+.trangchu_feedback{
+  width: 100%;
+  height: 40px;
+  /* background-color: red; */
+  margin: 30px 0;
+}
+.box_feedback{
+  width: 100%;
+  height:380px;
+  margin: 0 auto;
+  background: #f9f9f9;
+  border-radius: 15px;
+  border: 2px solid rgb(218, 216, 216);
+  overflow: hidden;
+}
+.feedback_navbar{
+  width: 100%;
+  height: 40px;
+  background:#9b9797;
+}
+.feedback_navbar p{
+  text-align: center;
+  color: whitesmoke;
+  padding: 5px;
+}
+.infor_feedback{
+  width: 60%;
+  margin: 0 auto;
+  padding: 10px;
+}
+.ten_feedback{
+  width: 100%;
+}
+.ten_feedback input{
+  width: 70%;
+  margin: 0 auto;
+  display: block;
+  margin-bottom:20px ;
+  padding: 8px;
+  border-radius: 9px;
+  box-shadow: 0px 0px 10px #DDDDDD;
+  border: none;
+  outline: none;
+}
+.content_feedback{
+  width: 100%;
+  margin: 0 auto;
+}
+.content_feedback textarea{
+  width: 70%;
+  margin: 0 auto;
+  display: block;
+  padding: 7px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+.submit_feedback{
+  width: 100%;
+}
+.submit_feedback input{
+  width: 120px;
+  padding: 7px;
+  border-radius: 15px;
+  margin: 0 auto;
+  display: block;
+  margin-top: 30px;
+  background:rgb(187, 192, 192);
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  box-shadow: 0 4px 10px gray;
+}
+.submit_feedback input:hover{
+  animation: feedback 0.4s infinite;
+}
+@keyframes feedback {
+  0%,100%{
+    transform: scale(0.97,0.97);
+  }
+  50%{
+    transform: scale(1);
+  }
+}
+
+
+
+
+/* footer end */
+
+
+
+
+
+@media (max-width:768px){
+
+    #menu-bar{
+      display: block;
+    }
+  
+    header .navbar{
+      position: absolute;
+      top:100%; left:-120%;
+      width:100%;
+      background:#eee;
+      border-top: .1rem solid rgba(0,0,0,.1);
+    }
+  
+    header .navbar.active{
+      left:0;
+    }
+  
+    header .navbar a{
+      font-size: 1rem;
+      background:#fff;
+      border:1px solid var(--black);
+      border-radius: .5rem;
+      padding:.5rem;
+      margin:.5rem;
+      display: block;
+      text-align: center;
+    }
+  
+    .slideshow-container .mySlides img {
+      width:60%;
+    } 
+    .slideshow-container .mySlides img .text{
+      width: 30px;
+
+    }
+  }
+  
+  @media (max-width:400px){
+  
+    html{
+      font-size: 50%;
+    }
+  
+    .slideshow-container .mySlides img {
+      padding-bottom: 6rem;
+    }
+  
+    .heading{
+      font-size: 3rem;
+    }
+  
+  }

@@ -8,22 +8,9 @@
 body{
     min-height: 100vh;
     position: relative;
-    background-image: linear-gradient(80deg, rgb(132, 132, 252),rgb(245, 206, 207));
+    /* background-image: linear-gradient(80deg, rgb(132, 132, 252),rgb(245, 206, 207)); */
+    background: url(img/trangchu_background.png);
     /* animation: doimau 10s ease-in-out infinite; */
-}
-@keyframes doimau {
-    0%,100%{
-        background-image: linear-gradient(90deg, rgb(132, 132, 252),rgb(245, 206, 207));
-    }
-    25%{
-        background-image: linear-gradient(180deg, rgb(132, 132, 252),rgb(245, 206, 207));
-    }
-    50%{
-        background-image: linear-gradient(270deg, rgb(132, 132, 252),rgb(245, 206, 207));
-    }
-    75%{
-        background-image: linear-gradient(360deg, rgb(132, 132, 252),rgb(245, 206, 207));
-    }
 }
 
 .login-form{
@@ -42,11 +29,14 @@ body{
     color: red;
     position:relative;
     height: 10px;
+    font-size: 6px;
 }
 #error{
+    /* background-color: rgb(133, 116, 116); */
     position: absolute;
     width: 100%;
     top: 50%;
+    height: 10px;
     left: 50%;
     transform: translate(-50%,-50%);
 }
@@ -54,6 +44,9 @@ body{
 .title{
     text-align: center;
     margin-bottom: 40px;
+    font-size: 16px;
+    color: rgb(70, 196, 196);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .input1{
     border-bottom: 1px solid gray;
@@ -75,7 +68,7 @@ body{
     top: 50%;
     right: 0;
     transform: translateY(-50%);
-    color: #FFCCCC ;
+    color: rgb(6, 192, 192);
     cursor: pointer;
     z-index: 1;
 }
@@ -86,7 +79,7 @@ body{
     position: absolute;
     left: 0;
     bottom: 0;
-    background: linear-gradient(80deg , blue , #FBBBBC);
+    /* background: linear-gradient(80deg , blue , #FBBBBC);?\ */
 }
 .temp{
     width: 100%;
@@ -100,11 +93,26 @@ body{
 .submit input{
     width: 100%;
     padding: 6px;
-    background: linear-gradient(80deg , #FBBBBC, blue );
+    background: linear-gradient(100deg , #FBBBBC, cyan, #FFBBBB );
     border: none;
     outline: none;
     color:#FFF;
     font-size: 18px;
+    cursor: pointer;
+}
+.submit input:hover{
+    animation: scale 0.4s infinite;
+}
+@keyframes scale {
+    0% ,100%{
+        border-radius: 10px;
+        transform: scale(0.96,0.96);
+        opacity: 0.9;
+    }
+    50%{
+        border-radius: 10px;
+        transform: scale(1,1);
+    }
 }
 .sign-up {
     width: 100%;

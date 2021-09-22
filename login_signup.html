@@ -13,7 +13,7 @@
     <form action="" method="POST" class="login-form">
 
         <div class="title">
-            <h1>Đăng nhập</h1>
+            <h1>Đăng Nhập</h1>
         </div>
         <div class="error"><p id="error"></p></div>
         <div class="mainlogin">
@@ -62,15 +62,17 @@
     //kiểm tra tên đăng nhập và mật khẩu demo
         
         function dangki(){
-            var lỗi=document.getElementById('error');
+            var loi=document.getElementById('error');
             var pass=b.value;
             var pass1 =new String(pass);
             var pass2 = pass1.length
-            if(pass2<6){
-                lỗi.innerHTML=('Mật khẩu phải dài hơn 6 kí tự');
+            if(pass2<=6){
+                // confirm("mật khẩu sai")
+                loi.innerHTML=('Mật khẩu phải dài hơn 6 kí tự');
             }
             else{
-                lỗi.innerHTML=("thành công");
+                loi.innerHTML=("thành công");
+                // confirm("thanh cong")
             }
         }
 

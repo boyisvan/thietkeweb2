@@ -8,7 +8,8 @@
 body{
     min-height: 100vh;
     position: relative;
-    background-image: linear-gradient(80deg, rgb(132, 132, 252),rgb(245, 206, 207));
+    /* background-image: linear-gradient(80deg, rgb(132, 132, 252),rgb(245, 206, 207)); */
+    background: url(img/trangchu_background.png);
 }
 .login-form{
     background: #fff;
@@ -38,6 +39,8 @@ body{
 .title{
     text-align: center;
     margin-bottom: 40px;
+    color: rgb(123, 228, 228);
+    font-size: 16px;
 }
 .input1{
     border-bottom: 1px solid gray;
@@ -59,7 +62,7 @@ body{
     top: 50%;
     right: 0;
     transform: translateY(-50%);
-    color: #FFCCCC ;
+    color: rgb(70, 184, 184) ;
     cursor: pointer;
     z-index: 1;
 }
@@ -70,7 +73,7 @@ body{
     position: absolute;
     left: 0;
     bottom: 0;
-    background: linear-gradient(80deg , blue , #FBBBBC);
+    /* background: linear-gradient(80deg , blue , #FBBBBC); */
 }
 .temp{
     width: 100%;
@@ -84,11 +87,25 @@ body{
 .submit input{
     width: 100%;
     padding: 6px;
-    background: linear-gradient(80deg , #FBBBBC, blue );
+    background: linear-gradient(230deg , #FBBBBC, rgb(77, 194, 194) , #FFCCCC );
     border: none;
     outline: none;
     color:#FFF;
     font-size: 18px;
+}
+.submit input:hover{
+    animation: scale 0.4s infinite;
+}
+@keyframes scale {
+    0% ,100%{
+        border-radius: 10px;
+        transform: scale(0.96,0.96);
+        opacity: 0.9;
+    }
+    50%{
+        border-radius: 10px;
+        transform: scale(1,1);
+    }
 }
 .sign-up {
     width: 100%;
